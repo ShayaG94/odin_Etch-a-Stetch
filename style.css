@@ -1,0 +1,14 @@
+#container {
+    height: 70vh;
+    width: 70vh;
+    border: 0.5px solid black;
+    margin: 15vh auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0;
+}
+
+.border-black{
+    border: 0.5px solid black;
+    box-sizing: border-box;
+}
