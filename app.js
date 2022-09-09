@@ -1,9 +1,31 @@
 const container = document.querySelector("#container");
 const range = document.querySelector("#gridRange");
-window.addEventListener("resize", () => {});
+const label = document.querySelector("#num");
+const clearButton = document.querySelector("#clear");
+const COLORS = [
+    "#D19900",
+    "#A60A3D",
+    "#00615c",
+    "#3b9259",
+    "#103d34",
+    "#008482",
+    "#96a540",
+    "#ac5d45",
+    "#9c5a6c",
+    "#7472a0",
+    "#c89566",
+    "#4a5973",
+    "#007da6",
+];
 
-range.addEventListener("change", () => {
-    resizeGrid(range.value);
+range.addEventListener("input", () => {
+    let gridSize = range.value;
+    resizeGrid();
+    label.innerText = `${gridSize} X ${gridSize}`;
+});
+
+clearButton.addEventListener("click", () => {
+    document.querySelectorAll(".squares").forEach((square) => (square.style.backgroundColor = "white"));
 });
 
 function createGrid(gridSize = range.value) {
@@ -19,16 +41,20 @@ function createGrid(gridSize = range.value) {
     });
 }
 
-function resizeGrid(gridSize) {
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
-    }
-    createGrid(gridSize);
+function resizeGrid() {
+    clearGrid();
+    createGrid();
 }
 
 function changeBgColor(element) {
-    console.log(element.style.ba);
-    element.style.backgroundColor = "blue";
+    let color = COLORS[Math.floor(Math.random() * COLORS.length)];
+    element.style.backgroundColor = color;
+}
+
+function clearGrid() {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
 }
 
 createGrid();

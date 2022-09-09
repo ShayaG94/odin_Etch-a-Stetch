@@ -1,11 +1,34 @@
+* {
+    font-family: 'Special Elite', cursive;
+}
+body {
+    background-color: #008482;
+}
+
+button {
+    margin: 8px 0;
+    padding: 10px 10px 6px;
+    font-size: medium;
+    border-radius: 10%;
+    background-color: #D19900;
+    border-color: #A60A3D;
+    color: #008482;
+}
+
+button:hover {
+    background-color: #AB7D00;
+    cursor: pointer;
+}
+
 #border {
-    background-color: black;
-    margin: 15vh auto 0;
+    background-color: #D6CAA3;
+    margin: 3vh auto 0;
     display: flex;
     height: 70vh;
     width: 70vh;
     align-items: center;
-    padding: 1px;
+    padding: 6px;
+    border-radius: 6px;
 }
 
 #container {
@@ -17,8 +40,14 @@
     font-size: 0;
 }
 
+header {
+    text-align: center;
+    margin-top: 6vh;
+    color: #D19900;
+}
+
 .squares{
-    border: 0.5px solid black;
+    border: 0.5px solid #D6CAA3;
     box-sizing: border-box;
     background-color: white;
 }
@@ -28,8 +57,15 @@
     flex-direction: column;
     align-items: center;
     margin: 2rem auto 0;
+    color: #D19900;
 }
 
-#range > input {
+input[type=range] {
     width: 25vh;
+    cursor: pointer;
+}
+
+#range > input ::-webkit-slider-runnable-track {
+    appearance: none;
+    background-color: #D19900;
 }
