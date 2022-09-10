@@ -12,16 +12,24 @@
     </head>
     <body>
         <header>
-            <h1>Etch A Sketch</h1>
+            <h1>Etch-A-Sketch</h1>
         </header>
-        <div id="border">
-            <div id="container"></div>
-        </div>
-        <div id="range">
-            <input type="range" name="gridRange" id="gridRange" min="2" max="60" value="16" />
-            <label for="gridSize">Grid Size: <span id="num">16 X 16</span></label>
-            <button type="button" id="clear">Clear!</button>
-        </div>
+        <main>
+            <nav>
+                <button id="psychMode" type="button">Psychodelic Mode</button>
+                <button id="picMode" type="button">Picture Mode</button>
+                <div id="range">
+                    <input type="range" name="gridRange" id="gridRange" min="2" max="60" value="16" />
+                    <label for="gridSize">Grid Size: <span id="num">16 X 16</span></label>
+                </div>
+                <button type="button" id="clear">Clear!</button>
+            </nav>
+            <div id="border">
+                <div id="container"></div>
+            </div>
+            <nav id="description"></nav>
+        </main>
+        <footer>Copyright &copy; Shaya Ginzburg & The Odin Project 2022</footer>
     </body>
     <script src="./app.js"></script>
 </html>
